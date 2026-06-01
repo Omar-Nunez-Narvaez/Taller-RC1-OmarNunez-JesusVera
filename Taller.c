@@ -9,4 +9,18 @@ int main() {
         printf("Error: Debe ingresar un numero entero positivo.\n");
         return 1;
     }
-    
+float notas[n][3];
+
+    // 1. Ingreso y validación de calificaciones
+    for (int i = 0; i < n; i++) {
+        printf("\n--- Estudiante %d ---\n", i + 1);
+        for (int j = 0; j < 3; j++) {
+            do {
+                printf("Nota asignatura %d (0-10): ", j + 1);
+                scanf("%f", &notas[i][j]);
+                if (notas[i][j] < 0 || notas[i][j] > 10) {
+                    printf("  -> Invalida. Ingrese un valor entre 0 y 10.\n");
+                }
+            } while (notas[i][j] < 0 || notas[i][j] > 10);
+        }
+    }
