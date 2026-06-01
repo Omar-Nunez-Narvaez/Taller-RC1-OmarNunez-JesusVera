@@ -25,7 +25,7 @@ float notas[n][3];
         }
     }
     
-    printf("\n=== RESULTADOS POR ESTUDIANTE ===\n");
+  printf("\n=== RESULTADOS POR ESTUDIANTE ===\n");
     for (int i = 0; i < n; i++) {
         float suma = 0, max = notas[i][0], min = notas[i][0];
         for (int j = 0; j < 3; j++) {
@@ -34,5 +34,5 @@ float notas[n][3];
             if (notas[i][j] < min) min = notas[i][j];
         }
         printf("Estudiante %d -> Promedio: %.2f | Max: %.2f | Min: %.2f\n", 
-               i + 1, suma / n, max, min); 
+               i + 1, suma / 3.0, max, min);
     }
