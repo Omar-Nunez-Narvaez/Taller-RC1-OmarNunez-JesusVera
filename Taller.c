@@ -52,5 +52,5 @@ float notas[n][3];
         printf("Asignatura %d -> Promedio: %.2f | Max: %.2f | Min: %.2f | Aprobados: %d | Reprobados: %d\n", 
                j + 1, suma / n, max, min, aprobados, reprobados);
             }
-            return 0;
+return 0;
 }
