@@ -36,3 +36,19 @@ float notas[n][3];
         printf("Estudiante %d -> Promedio: %.2f | Max: %.2f | Min: %.2f\n", 
                i + 1, suma / 3.0, max, min);
     }
+    printf("\n=== RESULTADOS POR ASIGNATURA ===\n");
+    for (int j = 0; j < 3; j++) {
+        float suma = 0, max = notas[0][j], min = notas[0][j];
+        int aprobados = 0, reprobados = 0;
+        
+        for (int i = 0; i < n; i++) {
+            suma += notas[i][j];
+            if (notas[i][j] > max) max = notas[i][j];
+            if (notas[i][j] < min) min = notas[i][j];
+            
+            if (notas[i][j] >= 6.0) aprobados++;
+            else reprobados++;
+        }
+        printf("Asignatura %d -> Promedio: %.2f | Max: %.2f | Min: %.2f | Aprobados: %d | Reprobados: %d\n", 
+               j + 1, suma / n, max, min, aprobados, reprobados);
+            }
